@@ -1,7 +1,7 @@
 export function buildConflictMessage(userName) {
   return {
-    status: "active",
+    status: "approved",
     owner: userName,
-    message: "Base response for merge conflict testing.",
+    message: "Right branch approves the request immediately.",
   };
 }
