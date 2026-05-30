@@ -1,4 +1,4 @@
 name: Avery Stone
-role: Incident Response Manager
-status: Away
-notes: Coordinates production incidents and documents follow-up actions.
+role: Customer Success Lead
+status: On call
+notes: Owns priority escalations and writes the daily handoff summary.
