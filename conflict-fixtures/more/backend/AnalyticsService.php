@@ -6,21 +6,21 @@ final class AnalyticsService
     {
         return [
             'volume' => [
-                'metric' => 'requests',
-                'window' => 'daily',
-                'message' => 'Count requests received today.',
+                'metric' => 'automated-requests',
+                'window' => 'realtime',
+                'message' => 'Right branch counts requests handled by automation.',
             ],
 
             'quality' => [
-                'metric' => 'reviews',
-                'window' => 'daily',
-                'message' => 'Track reviews completed today.',
+                'metric' => 'model-reviews',
+                'window' => 'realtime',
+                'message' => 'Right branch tracks model reviews and confidence scores.',
             ],
 
             'response' => [
-                'metric' => 'responses',
-                'window' => 'daily',
-                'message' => 'Measure responses sent today.',
+                'metric' => 'generated-responses',
+                'window' => 'realtime',
+                'message' => 'Right branch measures generated customer responses.',
             ],
         ];
     }

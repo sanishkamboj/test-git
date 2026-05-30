@@ -6,21 +6,21 @@ final class PermissionService
     {
         return [
             'viewer' => [
-                'level' => 'read',
-                'scope' => 'workspace',
-                'message' => 'View records in the workspace.',
+                'level' => 'smart-read',
+                'scope' => 'right-tenant',
+                'message' => 'Right branch grants viewers tenant-wide read access.',
             ],
 
             'editor' => [
-                'level' => 'write',
-                'scope' => 'workspace',
-                'message' => 'Edit records in the workspace.',
+                'level' => 'smart-write',
+                'scope' => 'right-tenant',
+                'message' => 'Right branch lets editors update automated recommendations.',
             ],
 
             'owner' => [
-                'level' => 'admin',
-                'scope' => 'workspace',
-                'message' => 'Manage workspace settings.',
+                'level' => 'system-admin',
+                'scope' => 'right-tenant',
+                'message' => 'Right branch lets owners manage automation settings.',
             ],
         ];
     }

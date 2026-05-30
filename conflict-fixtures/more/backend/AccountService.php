@@ -6,21 +6,21 @@ final class AccountService
     {
         return [
             'identity' => [
-                'label' => 'Account identity',
-                'mode' => 'standard',
-                'message' => 'Collect the account name and owner before review.',
+                'label' => 'Right identity automation',
+                'mode' => 'automated-right',
+                'message' => 'Right branch trusts verified identity from the account graph.',
             ],
 
             'billing' => [
-                'label' => 'Billing profile',
-                'mode' => 'standard',
-                'message' => 'Confirm the billing contact and current plan.',
+                'label' => 'Right billing automation',
+                'mode' => 'automated-right',
+                'message' => 'Right branch refreshes billing data from the payment system.',
             ],
 
             'access' => [
-                'label' => 'Access policy',
-                'mode' => 'standard',
-                'message' => 'Verify that the requester can update account settings.',
+                'label' => 'Right access automation',
+                'mode' => 'automated-right',
+                'message' => 'Right branch approves access with token-based verification.',
             ],
         ];
     }

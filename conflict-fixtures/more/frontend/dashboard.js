@@ -1,19 +1,19 @@
 export const dashboardPanels = {
   summary: {
-    title: "Summary",
-    refresh: "manual",
-    message: "Show the current support overview.",
+    title: "Right summary",
+    refresh: "live",
+    message: "Right branch streams automated status summaries.",
   },
 
   risks: {
-    title: "Risks",
-    refresh: "manual",
-    message: "List issues that need review.",
+    title: "Right risks",
+    refresh: "live",
+    message: "Right branch predicts risks from automation signals.",
   },
 
   activity: {
-    title: "Activity",
-    refresh: "manual",
-    message: "Show recent updates from the team.",
+    title: "Right activity",
+    refresh: "live",
+    message: "Right branch shows machine-generated timeline events.",
   },
 };
