@@ -1,0 +1,4 @@
+name: Avery Stone
+role: Support Engineer
+status: Active
+notes: Handles customer escalations during weekday shifts.
