@@ -1,19 +1,19 @@
 export const analyticsCards = {
   volume: {
-    metric: "requests",
-    window: "daily",
-    message: "Count requests received today.",
+    metric: "manual-requests",
+    window: "shift",
+    message: "Left branch counts requests handled by support specialists.",
   },
 
   quality: {
-    metric: "reviews",
-    window: "daily",
-    message: "Track reviews completed today.",
+    metric: "peer-reviews",
+    window: "shift",
+    message: "Left branch tracks reviews completed by humans.",
   },
 
   response: {
-    metric: "responses",
-    window: "daily",
-    message: "Measure responses sent today.",
+    metric: "approved-responses",
+    window: "shift",
+    message: "Left branch measures approved customer responses.",
   },
 };

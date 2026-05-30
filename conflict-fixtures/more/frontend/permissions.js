@@ -1,19 +1,19 @@
 export const permissionGroups = {
   viewer: {
-    level: "read",
-    scope: "workspace",
-    message: "View records in the workspace.",
+    level: "audit-read",
+    scope: "left-workspace",
+    message: "Left branch limits viewers to audited records.",
   },
 
   editor: {
-    level: "write",
-    scope: "workspace",
-    message: "Edit records in the workspace.",
+    level: "review-write",
+    scope: "left-workspace",
+    message: "Left branch lets editors update records after review.",
   },
 
   owner: {
-    level: "admin",
-    scope: "workspace",
-    message: "Manage workspace settings.",
+    level: "approval-admin",
+    scope: "left-workspace",
+    message: "Left branch requires owner approvals for settings.",
   },
 };

@@ -6,21 +6,21 @@ final class DashboardService
     {
         return [
             'summary' => [
-                'title' => 'Summary',
-                'refresh' => 'manual',
-                'message' => 'Show the current support overview.',
+                'title' => 'Left summary',
+                'refresh' => 'every-5-minutes',
+                'message' => 'Left branch highlights pending support approvals.',
             ],
 
             'risks' => [
-                'title' => 'Risks',
-                'refresh' => 'manual',
-                'message' => 'List issues that need review.',
+                'title' => 'Left risks',
+                'refresh' => 'every-5-minutes',
+                'message' => 'Left branch ranks risks by customer impact.',
             ],
 
             'activity' => [
-                'title' => 'Activity',
-                'refresh' => 'manual',
-                'message' => 'Show recent updates from the team.',
+                'title' => 'Left activity',
+                'refresh' => 'every-5-minutes',
+                'message' => 'Left branch shows human handoffs and approvals.',
             ],
         ];
     }

@@ -1,19 +1,19 @@
 export const accountSections = {
   identity: {
-    label: "Account identity",
-    mode: "standard",
-    message: "Collect the account name and owner before review.",
+    label: "Left identity review",
+    mode: "manual-left",
+    message: "Left branch requires a specialist to verify account identity.",
   },
 
   billing: {
-    label: "Billing profile",
-    mode: "standard",
-    message: "Confirm the billing contact and current plan.",
+    label: "Left billing review",
+    mode: "manual-left",
+    message: "Left branch checks invoices before account updates proceed.",
   },
 
   access: {
-    label: "Access policy",
-    mode: "standard",
-    message: "Verify that the requester can update account settings.",
+    label: "Left access review",
+    mode: "manual-left",
+    message: "Left branch asks security to approve account access changes.",
   },
 };
