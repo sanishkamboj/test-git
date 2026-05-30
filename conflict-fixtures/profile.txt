@@ -1,4 +1,4 @@
 name: Avery Stone
-role: Support Engineer
-status: Active
-notes: Handles customer escalations during weekday shifts.
+role: Customer Success Lead
+status: On call
+notes: Owns priority escalations and writes the daily handoff summary.
