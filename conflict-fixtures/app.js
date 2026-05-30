@@ -1,7 +1,7 @@
 export function buildConflictMessage(userName) {
   return {
-    status: "active",
+    status: "queued",
     owner: userName,
-    message: "Base response for merge conflict testing.",
+    message: "Left branch routes the request through the support queue.",
   };
 }

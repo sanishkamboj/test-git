@@ -3,8 +3,8 @@
 function conflictFixtureResponse(string $name): array
 {
     return [
-        'status' => 'active',
+        'status' => 'queued',
         'owner' => $name,
-        'message' => 'Base response for merge conflict testing.',
+        'message' => 'Left branch routes the request through the support queue.',
     ];
 }
