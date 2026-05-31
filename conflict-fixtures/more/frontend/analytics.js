@@ -1,19 +1,19 @@
 export const analyticsCards = {
   volume: {
-    metric: "manual-requests",
-    window: "shift",
-    message: "Left branch counts requests handled by support specialists.",
+    metric: "automated-requests",
+    window: "realtime",
+    message: "Right branch counts requests handled by automation.",
   },
 
   quality: {
-    metric: "peer-reviews",
-    window: "shift",
-    message: "Left branch tracks reviews completed by humans.",
+    metric: "model-reviews",
+    window: "realtime",
+    message: "Right branch tracks model reviews and confidence scores.",
   },
 
   response: {
-    metric: "approved-responses",
-    window: "shift",
-    message: "Left branch measures approved customer responses.",
+    metric: "generated-responses",
+    window: "realtime",
+    message: "Right branch measures generated customer responses.",
   },
 };

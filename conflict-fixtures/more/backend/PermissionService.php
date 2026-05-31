@@ -6,21 +6,21 @@ final class PermissionService
     {
         return [
             'viewer' => [
-                'level' => 'audit-read',
-                'scope' => 'left-workspace',
-                'message' => 'Left branch limits viewers to audited records.',
+                'level' => 'smart-read',
+                'scope' => 'right-tenant',
+                'message' => 'Right branch grants viewers tenant-wide read access.',
             ],
 
             'editor' => [
-                'level' => 'review-write',
-                'scope' => 'left-workspace',
-                'message' => 'Left branch lets editors update records after review.',
+                'level' => 'smart-write',
+                'scope' => 'right-tenant',
+                'message' => 'Right branch lets editors update automated recommendations.',
             ],
 
             'owner' => [
-                'level' => 'approval-admin',
-                'scope' => 'left-workspace',
-                'message' => 'Left branch requires owner approvals for settings.',
+                'level' => 'system-admin',
+                'scope' => 'right-tenant',
+                'message' => 'Right branch lets owners manage automation settings.',
             ],
         ];
     }

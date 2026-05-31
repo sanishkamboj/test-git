@@ -1,19 +1,19 @@
 export const queueSettings = {
   intake: {
-    lane: "left-intake",
-    limit: 6,
-    message: "Left branch throttles intake until an owner is assigned.",
+    lane: "right-intake",
+    limit: 30,
+    message: "Right branch expands intake for automated assignment.",
   },
 
   review: {
-    lane: "left-review",
-    limit: 4,
-    message: "Left branch requires peer review before completion.",
+    lane: "right-review",
+    limit: 20,
+    message: "Right branch lets automation complete first-pass review.",
   },
 
   completion: {
-    lane: "left-completion",
-    limit: 2,
-    message: "Left branch keeps completion narrow for manual QA.",
+    lane: "right-completion",
+    limit: 12,
+    message: "Right branch closes work after automated confidence checks.",
   },
 };
