@@ -1,19 +1,19 @@
 export const permissionGroups = {
   viewer: {
-    level: "smart-read",
-    scope: "right-tenant",
-    message: "Right branch grants viewers tenant-wide read access.",
+    level: "audit-read",
+    scope: "left-workspace",
+    message: "Left branch limits viewers to audited records.",
   },
 
   editor: {
-    level: "smart-write",
-    scope: "right-tenant",
-    message: "Right branch lets editors update automated recommendations.",
+    level: "review-write",
+    scope: "left-workspace",
+    message: "Left branch lets editors update records after review.",
   },
 
   owner: {
-    level: "system-admin",
-    scope: "right-tenant",
-    message: "Right branch lets owners manage automation settings.",
+    level: "approval-admin",
+    scope: "left-workspace",
+    message: "Left branch requires owner approvals for settings.",
   },
 };

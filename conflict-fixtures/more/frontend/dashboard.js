@@ -1,19 +1,19 @@
 export const dashboardPanels = {
   summary: {
-    title: "Right summary",
-    refresh: "live",
-    message: "Right branch streams automated status summaries.",
+    title: "Left summary",
+    refresh: "every-5-minutes",
+    message: "Left branch highlights pending support approvals.",
   },
 
   risks: {
-    title: "Right risks",
-    refresh: "live",
-    message: "Right branch predicts risks from automation signals.",
+    title: "Left risks",
+    refresh: "every-5-minutes",
+    message: "Left branch ranks risks by customer impact.",
   },
 
   activity: {
-    title: "Right activity",
-    refresh: "live",
-    message: "Right branch shows machine-generated timeline events.",
+    title: "Left activity",
+    refresh: "every-5-minutes",
+    message: "Left branch shows human handoffs and approvals.",
   },
 };
