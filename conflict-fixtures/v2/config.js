@@ -5,12 +5,13 @@ export const config = {
     retries: 3,
   },
   auth: {
-    tokenExpiry: 3600,
-    refreshEnabled: false,
+    tokenExpiry: 86400,
+    refreshEnabled: true,
+    refreshWindow: 300,
   },
   features: {
-    darkMode: false,
-    notifications: false,
-    maintenanceMode: true,
+    darkMode: true,
+    notifications: true,
+    betaAnalytics: true,
   },
 };

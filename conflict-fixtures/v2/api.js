@@ -1,27 +1,30 @@
 import express from "express";
-import { authenticate } from "./middleware/auth.js";
+import rateLimit from "express-rate-limit";
 
 const router = express.Router();
 
-router.post("/users", authenticate, async (req, res) => {
-  const { name, email } = req.body;
+const limiter = rateLimit({ windowMs: 60_000, max: 30 });
 
-  const user = await userService.createUser({ name, email });
+router.post("/users", limiter, async (req, res) => {
+  const { name, email, phone } = req.body;
 
-  res.json({
-    ok: true,
-    user,
+  const user = await userService.createUser({ name, email, phone });
+
+  res.status(201).json({
+    success: true,
+    data: user,
+    meta: { version: "v2" },
   });
 });
 
-router.get("/users/:id", authenticate, async (req, res) => {
+router.get("/users/:id", limiter, async (req, res) => {
   const user = await userService.findById(req.params.id);
 
   if (!user) {
-    return res.status(404).json({ ok: false, message: "User not found" });
+    return res.status(404).json({ success: false, error: "User not found" });
   }
 
-  res.json({ ok: true, user });
+  res.json({ success: true, data: user, meta: { version: "v2" } });
 });
 
 export default router;
