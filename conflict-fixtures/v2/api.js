@@ -1,26 +1,30 @@
 import express from "express";
+import rateLimit from "express-rate-limit";
 
 const router = express.Router();
 
-router.post("/users", async (req, res) => {
-  const { name, email } = req.body;
+const limiter = rateLimit({ windowMs: 60_000, max: 30 });
 
-  const user = await userService.createUser({ name, email });
+router.post("/users", limiter, async (req, res) => {
+  const { name, email, phone } = req.body;
 
-  res.json({
+  const user = await userService.createUser({ name, email, phone });
+
+  res.status(201).json({
     success: true,
     data: user,
+    meta: { version: "v2" },
   });
 });
 
-router.get("/users/:id", async (req, res) => {
+router.get("/users/:id", limiter, async (req, res) => {
   const user = await userService.findById(req.params.id);
 
   if (!user) {
-    return res.status(404).json({ success: false, message: "Not found" });
+    return res.status(404).json({ success: false, error: "User not found" });
   }
 
-  res.json({ success: true, data: user });
+  res.json({ success: true, data: user, meta: { version: "v2" } });
 });
 
 export default router;

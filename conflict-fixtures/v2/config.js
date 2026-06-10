@@ -1,15 +1,18 @@
 export const config = {
   api: {
     baseUrl: "https://api.example.com",
-    timeout: 3000,
-    retries: 1,
+    timeout: 10000,
+    retries: 5,
+    debug: true,
   },
   auth: {
-    tokenExpiry: 3600,
-    refreshEnabled: false,
+    tokenExpiry: 86400,
+    refreshEnabled: true,
+    refreshWindow: 300,
   },
   features: {
-    darkMode: false,
+    darkMode: true,
     notifications: true,
+    betaAnalytics: true,
   },
 };
