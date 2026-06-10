@@ -6,6 +6,8 @@ class UserService
     {
         $this->validateRequired($data, ['name', 'email']);
 
+        $data['email'] = strtolower(trim($data['email']));
+
         return [
             'id' => uniqid(),
             'name' => $data['name'],
@@ -17,7 +19,7 @@ class UserService
 
     public function updateRole(string $userId, string $role): bool
     {
-        $allowed = ['viewer', 'editor'];
+        $allowed = ['viewer', 'editor', 'moderator'];
         if (!in_array($role, $allowed)) {
             throw new \InvalidArgumentException("Invalid role: $role");
         }
